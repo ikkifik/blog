@@ -1,0 +1,73 @@
+# Setup
+title: Zuhdi Fikri
+url: https://ikkifik.github.io/
+paginate: 1
+baseurl: ""
+permalink: /:categories/:year/:month/:day/:title
+
+# Gems
+plugins:
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-seo-tag
+
+# Optimize Jekyll
+exclude:
+  - .editorconfig
+  - .git
+  - .jekyll-cache
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.md
+  - README.md
+
+sass:
+  sass_dir: _sass
+  style: :compressed
+
+# Options
+
+# Replace this value and uncomment to enable Google Analytics tracking
+# ga_analytics: UA-000000-0
+
+# Specify the author for blog posts
+author:
+  name: Ikkifik
+  url: https://twitter.com/
+  email: mzfikrij@gmail.com
+
+# Custom vars
+version: 3.0.0
+
+# Navbar page list
+nav:
+  - title: Artikel
+    url: /articles
+  - title: Project
+    url: /project
+  - title: Catatan
+    url: /notes
+  - title: Tentang
+    url: /about
+
+collections:
+  notes:
+    permalink: /:collection/:year/:month/:day/:title
+    output: true
+  articles:
+    permalink: /:collection/:year/:month/:day/:title
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "notes"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: ""
+      type: "articles"
+    values:
+      layout: "post"        
