@@ -55,4 +55,13 @@ Hal ini karena 1 menit pada brief di atas adalah durasi video yang akan dihasilk
 
 ----
 
-Semoga bermanfaat.
+Biasanya script atau naskah yang saya susun menggunakan aplikasi pengolah kata, bisa menggunakan Microsoft Word, Google Docs, LibreOffice Writer, WPS Office, dsb. Dengan format dokumen sebagai berikut: 
+- Ukuran huruf: 12  
+- Jenis huruf: Calibri  
+- Perataan teks: Justify  
+
+Berikut script yang telah diimplementasikan pada Google Docs.
+
+![Naskah 5M Covid-19](/assets/images/script-writing-03-naskah-pada-gdocs.png "Naskah 5M Covid-19 di Google Docs")
+
+Sekian tulisan kali ini, silakan apabila ingin dipraktikkan, semoga bermanfaat.
