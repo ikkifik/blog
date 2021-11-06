@@ -43,7 +43,7 @@ Jika digabungkan akan menjadi seperti ini.
 
 Naskah di atas bisa kita cek berapa banyak kata dan berapa lama durasi yang dihasilkan menggunakan kalkulator pada website [thevoicerealm](https://www.thevoicerealm.com/count-script.php).
 
-![Kalkulator VO](/assets/images/script-writing-03-membuat-script.png "Menghitung banyak kata dan durasi yang dihasilkan dengan kalkulator thevoicerealm")
+![Kalkulator VO](/assets/images/script-writing/script-writing-03-membuat-script-words-calculator.png "Menghitung banyak kata dan durasi yang dihasilkan dengan kalkulator thevoicerealm")
 
 Kita dapatkan 27 detik dari 73 kata, mengapa begitu? Padahal durasi yang diminta 1 menit dengan asumsi 100 kata per menit, sedangkan kita dapatkan 73 kata baru mencapai 27 detik.  
 
@@ -62,6 +62,6 @@ Biasanya script atau naskah yang saya susun menggunakan aplikasi pengolah kata, 
 
 Berikut script yang telah diimplementasikan pada Google Docs.
 
-![Naskah 5M Covid-19](/assets/images/script-writing-03-naskah-pada-gdocs.png "Naskah 5M Covid-19 di Google Docs")
+![Naskah 5M Covid-19](/assets/images/script-writing/script-writing-03-membuat-script-naskah-pada-gdocs.png "Naskah 5M Covid-19 di Google Docs")
 
 Sekian tulisan kali ini, silakan apabila ingin dipraktikkan, semoga bermanfaat.

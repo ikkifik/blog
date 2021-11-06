@@ -57,6 +57,9 @@ collections:
   articles:
     permalink: /:collection/:year/:month/:day/:title
     output: true
+  project:
+    permalink: /:collection/:year/:month/:day/:title
+    output: true
 
 defaults:
   -
@@ -70,4 +73,10 @@ defaults:
       path: ""
       type: "articles"
     values:
-      layout: "post"        
+      layout: "post"
+  -
+    scope:
+      path: ""
+      type: "project"
+    values:
+      layout: "post"      
