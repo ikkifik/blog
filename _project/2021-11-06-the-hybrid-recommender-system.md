@@ -2,7 +2,7 @@
 title: "The Hybrid Recommender System of the Indonesian Online Market Products using IMDb weight rating and TF-IDF"
 ---
 
-This project is done for the final project in order to qualify requirement for diploma graduation degree in AMIKOM University of Yogyakarta. This project supervised by Mr. Arif Dwi Laksito and already published at RESTI Journal from the professional organization "Ikatan Ahli Informatika Indonesia (IAII)."  
+This project is done for the final project in order to qualify requirement for diploma degree graduation in AMIKOM University of Yogyakarta. This project supervised by Mr. Arif Dwi Laksito and already published at RESTI Journal from the professional organization "Ikatan Ahli Informatika Indonesia (IAII)."  
 
 <!-- Proyek ini dikerjakan dalam rangka tugas akhir guna memenuhi syarat kelulusan program diploma di Universitas AMIKOM Yogyakarta. Disupervisori oleh bapak Arif Dwi Laksito. Proyek ini telah dipublikasikan pada Jurnal Resti yang diterbitkan oleh organisasi profesi Ikatan Ahli Informatika Indonesia (IAII).   -->
 
