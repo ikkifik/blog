@@ -5,7 +5,7 @@ title: About
 
 # 👦️ About
 
-Orang biasa, INTJ.
+Orang biasa, [I](/notes)NTJ.
 
 Temui saya di platform lain:
 [Medium](https://ikkifik.medium.com/) \| [Instagram](https://www.instagram.com/ikkifik/) \| [LinkedIn](https://www.linkedin.com/in/muhammad-zuhdi-fikri-johari/) \| [Email](mailto:mzfikrij@gmail.com)

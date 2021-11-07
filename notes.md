@@ -5,7 +5,8 @@ title: Catatan
 
 # 📑️ Catatan
 
-Halaman isinya tulisan random, gak jelas, suka-suka yang nulis aja.
+Hey kamu menemukannya!  
+Halaman yang isinya tulisan random, gak jelas, suka-suka yang nulis aja.
 
 {% assign postsByYearMonth = site.notes | sort: 'date' | reverse | group_by_exp: "post", "post.date | date: '%B %Y'" %}
 {% for yearMonth in postsByYearMonth %}
