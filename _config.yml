@@ -1,8 +1,8 @@
 # Setup
 title: Zuhdi Fikri
-url: https://ikkifik.github.io/
+url: https://ikkifik.github.io
 paginate: 1
-baseurl: ""
+baseurl: "/blog"
 permalink: /:categories/:year/:month/:day/:title
 
 # Gems
