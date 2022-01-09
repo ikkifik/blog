@@ -1,6 +1,7 @@
 ---
 title: "Error OOBE Pada Windows 10 VM"
 categories: Troubleshooting
+tags: Troubleshooting
 ---
 
 Pernah saya diminta oleh Pakde(tetangga) yang berprofesi sebagai dosen di salah satu perguruan tinggi kedinasan untuk membantu merapikan dokumen laporannya. Pada saat itu posisi sistem operasi yang sedang saya gunakan single boot Linux Ubuntu, dengan software office menggunakan LibreOffice. Sedangkan mayoritas pekerja kantoran pasti menggunakan sistem operasi windows dengan sofware office microsoft office.  

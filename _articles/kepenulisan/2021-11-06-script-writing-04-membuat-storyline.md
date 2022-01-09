@@ -1,6 +1,7 @@
 ---
 title: "Script Writing: 04 Membuat Storyline"
 categories: Kepenulisan
+tags: Kepenulisan
 ---
 
 Tahap setelah menulis script pada rangkaian pekerjaan script writer adalah membuat storyline. Storyline ini akan digunakan oleh tim desainer asset sebagai patokan untuk runtutan cerita dan apa saja elemen yang akan dibuat, sehingga hasil akhir berupa storyboard.  

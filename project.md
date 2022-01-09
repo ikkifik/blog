@@ -16,3 +16,6 @@ This page contains all project that I have been working, the content will be del
     {% endfor %}
   </ul>
 {% endfor %}
+
+<br>
+<hr>

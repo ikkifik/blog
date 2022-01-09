@@ -1,6 +1,7 @@
 ---
 title: "Script Writing: 02 Istilah-istilah Script Writing"
 categories: Kepenulisan
+tags: Kepenulisan
 ---
 
 Beberapa kata di bawah dapat menjadi catatan referensi apabila ingin terjun ke bidang script writing:

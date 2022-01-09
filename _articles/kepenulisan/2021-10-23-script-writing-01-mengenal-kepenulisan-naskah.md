@@ -1,6 +1,7 @@
 ---
 title: "Script Writing: 01 Mengenal Kepenulisan Naskah"
 categories: Kepenulisan
+tags: Kepenulisan
 ---
 
 Script writing atau penulisan naskah terkadang disebut juga penulisan skenario termasuk ke dalam aktivitas pada tahap praproduksi. Tahap praproduksi meliputi:  

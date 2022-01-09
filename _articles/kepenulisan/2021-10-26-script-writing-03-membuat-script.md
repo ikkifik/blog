@@ -1,6 +1,7 @@
 ---
 title: "Script Writing: 03 Membuat Script"
 categories: Kepenulisan
+tags: Kepenulisan
 ---
 
 Pada tulisan ini kita akan mencoba membuat script atau naskah yang nanti akan digunakan oleh voice over talent. Hal pertama yang diperlukan adalah menentukan brief terlebih dahulu, di bawah ini sekilas contoh brief yang akan diterapkan pada naskah nantinya.  
