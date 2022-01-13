@@ -14,3 +14,7 @@ R biasa digunakan oleh peneliti, analis data (data analyst), statistikawan, dan 
 R tersedia gratis di bawah lisensi GNU General Public, dan pre-compiled binaries-nya tersedia untuk beragam sistem operasi termasuk Windows, Linux, dan Mac OS.  
 
 R dikembangkan oleh Ross Ihaka dan Robert Gentleman dari Universitas Auckland, New Zeland. Nama “R” sendiri diambil dari huruf pertama para pengembangnya, Ross dan Robert.  
+
+<p align="center">
+  <img src="/assets/images/r-proglang/r-01-rfounder.png" alt="Founder R (Ross Ihaka & Robert Gentleman)" title="Founder R (Ross Ihaka & Robert Gentleman)" />
+</p>
