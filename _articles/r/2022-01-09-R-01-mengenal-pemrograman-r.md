@@ -4,7 +4,7 @@ categories: R
 tags: R
 ---
 <p align="center">
-  <img src="/assets/images/r-proglang/r-logo.png" alt="Logo R" />
+  <img src="/assets/images/r-proglang/r-logo.png" alt="Logo R" title="Logo R" class="logo-topic" />
 </p>
 
 Lama tidak menulis di blog ini saya akan mulai menulis kembali dengan artikel kali ini belajar bahasa R. R adalah bahasa pemrograman sekaligus lingkungan (environment) yang biasa digunakan untuk analisis data, komputasi statistika, dan penelitian ilmiah.  

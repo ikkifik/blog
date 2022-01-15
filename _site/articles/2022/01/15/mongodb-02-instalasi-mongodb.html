@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark-poole">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    
+      MongoDB: Instalasi MongoDB di Linux Ubuntu &middot; Zuhdi Fikri
+    
+  </title>
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="Zuhdi Fikri" href="/atom.xml">
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="MongoDB: Instalasi MongoDB di Linux Ubuntu" />
+<meta name="author" content="Ikkifik" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/articles/2022/01/15/mongodb-02-instalasi-mongodb" />
+<meta property="og:url" content="http://localhost:4000/articles/2022/01/15/mongodb-02-instalasi-mongodb" />
+<meta property="og:site_name" content="Zuhdi Fikri" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-01-15T00:00:00+07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="MongoDB: Instalasi MongoDB di Linux Ubuntu" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/articles/2022/01/15/mongodb-02-instalasi-mongodb"},"url":"http://localhost:4000/articles/2022/01/15/mongodb-02-instalasi-mongodb","headline":"MongoDB: Instalasi MongoDB di Linux Ubuntu","dateModified":"2022-01-15T00:00:00+07:00","datePublished":"2022-01-15T00:00:00+07:00","author":{"@type":"Person","name":"Ikkifik"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body>
+    <div class="container content">
+      <header class="masthead">
+        <h3 class="masthead-title">
+          <a href="/" title="Home">Zuhdi Fikri</a>
+
+          <nav class="nav">
+            
+            <small><a href="/articles" class="underline">Artikel</a></small>
+            
+            <small><a href="/project" class="underline">Project</a></small>
+            
+            <small><a href="/about" class="underline">Tentang</a></small>
+            
+          </nav>
+        </h3>
+      </header>
+
+      <main>
+        <article class="post">
+  <h1 class="post-title">MongoDB: Instalasi MongoDB di Linux Ubuntu</h1>
+  <time datetime="2022-01-15T00:00:00+07:00" class="post-date">15 Jan 2022</time>
+  <p align="center">
+  <img src="/assets/images/mongodb/mongodb-logo.png" alt="Logo MongoDB" class="logo-topic" title="Logo MongoDB" />
+</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Bagaimana cara instalasi MongoDB?  
+</code></pre></div></div>
+
+<p>Instalasi pada artikel ini akan menggunakan OS linux Ubuntu versi 20.04 LTS dengan panduan dari website dokumentasinya langsung di <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/#install-mongodb-community-edition">docs.mongodb.com</a>. Di sini saya akan menggunakan MongoDB edisi komunitas yang tentunya saya pilih karena gratis.</p>
+
+<p>Langkah pertama dengan menambahkan public key agar kita bisa mendapatkan akses repositori instalasi MongoDB. Mari terlebih dahulu buka terminal ubuntu, bisa dengan kombinasi <code class="language-plaintext highlighter-rouge">Ctrl + Alt + T</code>.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">wget <span class="nt">-qO</span> - https://www.mongodb.org/static/pgp/server-5.0.asc | <span class="se">\ </span>
+<span class="nb">sudo </span>apt-key add -</code></pre></figure>
+
+<p align="center">
+  <img src="/assets/images/mongodb/mongodb-02-menambahkan-public-key-repository-mongodb.png" alt="Public key repository MongoDB" title="Public key repository MongoDB" />
+</p>
+
+<p>Public key dianggap berhasil ditambahkan ketika muncul huruf “OK” di terminal. Selanjutnya kita tambahkan repository MongoDB dengan mengetikkan perintah di bawah ini</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">"deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse"</span> | <span class="se">\ </span>
+<span class="nb">sudo tee</span> /etc/apt/sources.list.d/mongodb-org-5.0.list</code></pre></figure>
+
+<p align="center">
+  <img src="/assets/images/mongodb/mongodb-02-menambahkan-repository-mongodb.png" alt="Repository MongoDB" title="Repository MongoDB" />
+</p>
+
+<p>Perintah tersebut akan membuat file <code class="language-plaintext highlighter-rouge">.list</code> pada direktori <code class="language-plaintext highlighter-rouge">/etc/apt/sources.list.d/</code> dengan nama <code class="language-plaintext highlighter-rouge">mongodb-5.0.list</code>. Setelah menambahkan repository, saatnya mengupdate repository dengan perintah <code class="language-plaintext highlighter-rouge">apt update</code>.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>apt update </code></pre></figure>
+
+<p>Setelah update repository selesai, kita bisa langsung install mongodb dengan perintah <code class="language-plaintext highlighter-rouge">apt install mongodb-org</code>.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> mongodb-org</code></pre></figure>
+
+<p>Jika instalasi telah selesai, ketersediaan mongodb dapat kita cek melalui perintah <code class="language-plaintext highlighter-rouge">mongod --version</code>.</p>
+
+<p align="center">
+  <img src="/assets/images/mongodb/mongodb-02-cek-versi-mongodb.png" alt="Cek versi MongoDB" title="Cek versi MongoDB" />
+</p>
+
+<p>Untuk mengaktifkan mongodb bisa dilakukan dengan mengaktifkan service mongod menggunakan perintah <code class="language-plaintext highlighter-rouge">sudo systemctl start mongod</code>, lalu kita cek status dari mongodb apakah sudah aktif atau belum dengan perintah <code class="language-plaintext highlighter-rouge">sudo systemctl status mongod</code>.</p>
+
+<p align="center">
+  <img src="/assets/images/mongodb/mongodb-02-cek-service-mongodb.png" alt="Cek service MongoDB" title="Cek service MongoDB" />
+</p>
+
+<hr />
+
+<p><strong>Service MongoDB Failed</strong></p>
+
+<p>Jika setelah instalasi dan ketika kita cek ternyata mongodb gagal aktif dengan tampilan seperti di bawah ini.</p>
+
+<p align="center">
+  <img src="/assets/images/mongodb/mongodb-02-gagal-mengaktifkan-service-mongodb.png" alt="Gagal mengaktifkan service MongoDB" title="Gagal mengaktifkan service MongoDB" />
+</p>
+
+<p>Kendala tersebut bisa saja terjadi karena user permission pada file <code class="language-plaintext highlighter-rouge">.sock</code> yang mengharuskan kita untuk mengubah kepemilikan file tersebut. Contohnya seperti di bawah ini,</p>
+
+<!-- https://stackoverflow.com/a/64964015 -->
+
+<p align="center">
+  <img src="/assets/images/mongodb/mongodb-02-error-kepemilikan-tmp-sock-mongodb.png" alt="Error kepemilikan file /tmp/mongodb-27017.sock MongoDB" title="Error kepemilikan file /tmp/mongodb-27017.sock MongoDB" />
+</p>
+
+<p>Kepemilikan masih ada di user bernama ikkifik (ikkifik:ikkifik), saya akan ubah kepemilikan file tersebut menjadi mongodb (mongodb:mongodb) dengan perintah,</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo chown</span> <span class="nt">-R</span> mongodb:mongodb /var/lib/mongodb
+<span class="nb">sudo chown </span>mongodb:mongodb /tmp/mongodb-27017.sock</code></pre></figure>
+
+<p>Setelah diubah menjadi seperti ini,</p>
+
+<p align="center">
+  <img src="/assets/images/mongodb/mongodb-02-solve-error-kepemilikan-tmp-sock-mongodb.png" alt="Memperbaiki error kepemilikan file /tmp/mongodb-27017.sock MongoDB" title="Memperbaiki error kepemilikan file /tmp/mongodb-27017.sock MongoDB" />
+</p>
+
+<p>Sekarang bisa dicoba untuk mengaktifkannya kembali dengan perintah <code class="language-plaintext highlighter-rouge">sudo systemctl start mongod</code>, lalu kita cek apakah service mongodb telah aktif dengan perintah <code class="language-plaintext highlighter-rouge">sudo systemctl status mongod</code>.</p>
+
+<p align="center">
+  <img src="/assets/images/mongodb/mongodb-02-cek-service-mongodb.png" alt="Cek service MongoDB" title="Cek service MongoDB" />
+</p>
+
+<p>Service mongodb telah berhasil aktif di mesin (laptop) saya, service mongodb bernama <code class="language-plaintext highlighter-rouge">mongod</code>.service.</p>
+
+<p>Perintah <code class="language-plaintext highlighter-rouge">sudo systemctl start mongod</code> hanya akan mengaktifkan service mongodb selama mesin menyala dan akan kembali mati ketika mesin shutdown, untuk menyalakannya kembali kita perlu menuliskan ulang secara manual perintah <code class="language-plaintext highlighter-rouge">sudo systemctl start mongod</code>.</p>
+
+<p>Untuk itu apabila mongodb dibutuhkan untuk selalu aktif setiap kali mesin restart dan agar kita tidak perlu melakukan <code class="language-plaintext highlighter-rouge">sudo systemctl start mongod</code> berulang kali, kita dapat gunakan perintah <code class="language-plaintext highlighter-rouge">sudo systemctl enable mongod</code>.</p>
+
+</article>
+<hr>
+
+      </main>
+
+      <footer class="footer">
+        <small>
+          &copy; Zuhdi Fikri
+          <time datetime="2022-01-15T17:39:27+07:00"
+            >2022</time
+          >. All rights reserved.
+        </small>
+      </footer>
+    </div>
+
+    
+  </body>
+</html>

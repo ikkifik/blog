@@ -4,7 +4,7 @@ categories: R
 tags: R
 ---
 <p align="center">
-  <img src="/assets/images/r-proglang/r-logo.png" alt="Logo R" />
+  <img src="/assets/images/r-proglang/r-logo.png" alt="Logo R" title="Logo R" class="logo-topic" />
 </p>
 
 Sebenarnya operator penugasan telah kita ketahui dari artikel sebelumnya. Operator penugasan atau sering dikenal dengan istilah _assignment operator_ digunakan untuk memberikan "tugas" (nilai) kepada variabel.  

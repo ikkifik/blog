@@ -4,7 +4,7 @@ categories: R
 tags: R
 ---
 <p align="center">
-  <img src="/assets/images/r-proglang/r-logo.png" alt="Logo R" />
+  <img src="/assets/images/r-proglang/r-logo.png" alt="Logo R" title="Logo R" class="logo-topic" />
 </p>
 
 Variabel digunakan sebagai wadah penyimpanan data yang nilainya dapat diubah sesuai kebutuhan. Pada R variabel dapat dituliskan dalam beberapa aturan, antara lain:

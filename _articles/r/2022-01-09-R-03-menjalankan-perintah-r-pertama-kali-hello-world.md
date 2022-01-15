@@ -4,7 +4,7 @@ categories: R
 tags: R
 ---
 <p align="center">
-  <img src="/assets/images/r-proglang/r-logo.png" alt="Logo R" />
+  <img src="/assets/images/r-proglang/r-logo.png" alt="Logo R" title="Logo R" class="logo-topic" />
 </p>
 
 Sudah menjadi ritual wajib setelah instalasi bahasa pemrograman adalah dengan menjalankan program bernama “Hello World!” bagi yang baru belajar pemrograman dan artikel ini adalah yang pertama digunakan sebagai referensi tidak perlu khawatir, “Hello World!” hanyalah program untuk memunculkan kata tersebut menggunakan perintah bahasa pemrograman, contohnya akan dipraktikkan menggunakan bahasa R.  

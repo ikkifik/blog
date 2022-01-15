@@ -4,7 +4,7 @@ categories: R
 tags: R
 ---
 <p align="center">
-  <img src="/assets/images/r-proglang/r-logo.png" alt="Logo R" />
+  <img src="/assets/images/r-proglang/r-logo.png" alt="Logo R" title="Logo R" class="logo-topic" />
 </p>
 
 Untuk pembahasan operator logika saya akan menggunakan bantuan tabel untuk penjelasan terkait aturan logikanya dan hasil dari aturan logika tersebut.  

@@ -4,7 +4,7 @@ categories: R
 tags: R
 ---
 <p align="center">
-  <img src="/assets/images/r-proglang/r-logo.png" alt="Logo R" />
+  <img src="/assets/images/r-proglang/r-logo.png" alt="Logo R" title="Logo R" class="logo-topic" />
 </p>
 
 Daripada menggunakan terminal atau bisa disebut CLI based, akan lebih baik kita gunakan fasilitas IDE yang telah tersedia untuk R bernama Rstudio. Rstudio dapat diunduh melalui website officialnya langsung rstudio.com, atau agar memudahkan bisa ikuti link berikut ini, [Unduh RStudio](https://www.rstudio.com/products/rstudio/download/#download).  

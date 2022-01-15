@@ -4,7 +4,7 @@ categories: R
 tags: R
 ---
 <p align="center">
-  <img src="/assets/images/r-proglang/r-logo.png" alt="Logo R" />
+  <img src="/assets/images/r-proglang/r-logo.png" alt="Logo R" title="Logo R" class="logo-topic" />
 </p>
 
 Sebelum memulai praktik operator relasional, saya akan mengenalkan fungsi lain yang dapat digunakan sebagai keluaran (output) selain fungsi print() yaitu cat().  

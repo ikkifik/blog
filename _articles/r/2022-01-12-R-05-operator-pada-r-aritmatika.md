@@ -4,7 +4,7 @@ categories: R
 tags: R
 ---
 <p align="center">
-  <img src="/assets/images/r-proglang/r-logo.png" alt="Logo R" />
+  <img src="/assets/images/r-proglang/r-logo.png" alt="Logo R" title="Logo R" class="logo-topic" />
 </p>
 
 Operator adalah simbol yang digunakan untuk memberikan instruksi kepada interpreter untuk melakukan operasi matematika atau logika. Operator pada R dapat diklasifikasikan ke dalam beberapa jenis.  

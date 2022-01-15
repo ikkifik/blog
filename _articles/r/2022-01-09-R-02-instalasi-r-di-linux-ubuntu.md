@@ -4,7 +4,7 @@ categories: R
 tags: R
 ---
 <p align="center">
-  <img src="/assets/images/r-proglang/r-logo.png" alt="Logo R" />
+  <img src="/assets/images/r-proglang/r-logo.png" alt="Logo R" title="Logo R" class="logo-topic" />
 </p>
 
 Artikel kali ini saya akan bagikan cara instalasi bahasa R di linux ubuntu, mengambil referensi dari dokumentasi bahasa R di [cloud.r-project.org](https://cloud.r-project.org/) perintah berikut dapat dilakukan melalui terminal linux (Ctrl + Alt + T).  

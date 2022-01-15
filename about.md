@@ -5,7 +5,7 @@ title: About
 
 # 👦️ About
 
-Orang biasa, [I](/notes)NTJ.
+Orang biasa, [IN](/notes)TJ.
 
 Temui saya di media lain:
 - [Medium](https://ikkifik.medium.com/) 
