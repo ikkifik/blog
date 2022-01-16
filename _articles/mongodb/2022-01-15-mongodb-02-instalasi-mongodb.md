@@ -1,5 +1,5 @@
 ---
-title: "MongoDB: Instalasi MongoDB di Linux Ubuntu"
+title: "MongoDB: 02 Instalasi MongoDB di Linux Ubuntu"
 categories: MongoDB
 tags: MongoDB
 ---
