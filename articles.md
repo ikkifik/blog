@@ -9,6 +9,7 @@ Halaman untuk sharing ilmu. Gunakan <mark>Ctrl+F</mark> untuk mencari judul mate
 {% assign items_grouped = site.articles | group_by_exp: "post", "post.tags" %}
 Daftar topik yang tersedia: {% for tag in items_grouped %} <mark><a href="#{{ tag.name }}">#{{ tag.name }}({{ tag.size }})</a></mark> {% endfor %}
 <hr>
+
 <!-- Group by post categories -->
 {% assign postsByCategories = site.articles | sort | group_by_exp: "post", "post.categories"  %}
 {% for categories in postsByCategories %}
@@ -19,5 +20,6 @@ Daftar topik yang tersedia: {% for tag in items_grouped %} <mark><a href="#{{ ta
     {% endfor %} 
   </ul>
 {% endfor %}
+
 <br>
 <hr>
