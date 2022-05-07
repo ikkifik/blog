@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark-poole">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    
+      Redis: 02 Instalasi Redis di Linux Ubuntu &middot; Re:L
+    
+  </title>
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="Re:L" href="/atom.xml">
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="Redis: 02 Instalasi Redis di Linux Ubuntu" />
+<meta name="author" content="Ikkifik" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Setelah mengenal sekilas tentang apa itu redis dan konsep databasenya, sekarang kita akan coba install redis di Ubuntu 20.04 melalui Ubuntu official PPA menggunakan apt. Buka terminal dengan ctrl + alt + t ikuti langkah di bawah ini." />
+<meta property="og:description" content="Setelah mengenal sekilas tentang apa itu redis dan konsep databasenya, sekarang kita akan coba install redis di Ubuntu 20.04 melalui Ubuntu official PPA menggunakan apt. Buka terminal dengan ctrl + alt + t ikuti langkah di bawah ini." />
+<link rel="canonical" href="http://localhost:4000/articles/2022/05/07/redis-02-instalasi-redis-di-linux-ubuntu" />
+<meta property="og:url" content="http://localhost:4000/articles/2022/05/07/redis-02-instalasi-redis-di-linux-ubuntu" />
+<meta property="og:site_name" content="Re:L" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-05-07T00:00:00+07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Redis: 02 Instalasi Redis di Linux Ubuntu" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/articles/2022/05/07/redis-02-instalasi-redis-di-linux-ubuntu"},"description":"Setelah mengenal sekilas tentang apa itu redis dan konsep databasenya, sekarang kita akan coba install redis di Ubuntu 20.04 melalui Ubuntu official PPA menggunakan apt. Buka terminal dengan ctrl + alt + t ikuti langkah di bawah ini.","url":"http://localhost:4000/articles/2022/05/07/redis-02-instalasi-redis-di-linux-ubuntu","headline":"Redis: 02 Instalasi Redis di Linux Ubuntu","dateModified":"2022-05-07T00:00:00+07:00","datePublished":"2022-05-07T00:00:00+07:00","author":{"@type":"Person","name":"Ikkifik"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+<body>
+  <div class="container content">
+    <header class="masthead">
+      <h3 class="masthead-title">
+        <a href="/" title="Home" class="title">Re:L</a>
+
+        <nav class="nav">
+          
+
+          
+          <small><a href="/articles" class="underline">Artikel</a></small>
+          
+          
+
+          
+          <small><a href="/project" class="underline">Project</a></small>
+          
+          
+
+          
+          <div class="dropdown">
+            <small><a href="#" class="underline">Lainnya</a></small>
+            <div class="dropdown-content">
+              
+              <small><a href="/books">Buku</a></small>
+              
+              <small><a href="/about">Tentang</a></small>
+              
+            </div>
+          </div>
+          
+          
+        </nav>
+      </h3>
+    </header>
+
+    <main>
+      <article class="post">
+  <h1 class="post-title">Redis: 02 Instalasi Redis di Linux Ubuntu</h1>
+  <time datetime="2022-05-07T00:00:00+07:00" class="post-date">07 May 2022</time>
+  <p>Setelah mengenal sekilas tentang apa itu redis dan konsep databasenya, sekarang kita akan coba install redis di Ubuntu 20.04 melalui Ubuntu official PPA menggunakan apt. Buka terminal dengan <code class="language-plaintext highlighter-rouge">ctrl + alt + t</code> ikuti langkah di bawah ini.</p>
+
+<p>Tambahkan repository redis</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo add-apt-repository ppa:redislabs/redis
+</code></pre></div></div>
+
+<p>Lalu update repository, walaupun untuk versi ubuntu setelah 18.04 sudah tidak perlu karena setelah menambahkan repository ubuntu akan langsung otomatis melakukan update.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt update
+</code></pre></div></div>
+
+<p>Install redis</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install redis
+</code></pre></div></div>
+
+<p>Cek apakah redis sudah berhasil terpasang atau belum dengan perintah <code class="language-plaintext highlighter-rouge">redis-cli --version</code>.</p>
+
+<p align="center">
+  <img src="/assets/images/redis/redis-02-version-check.png" alt="Cek Versi Redis" title="Cek Versi Redis" />
+</p>
+
+<p>Cek juga koneksi antara redis client dengan redis server dengan mengetikan <code class="language-plaintext highlighter-rouge">ping</code>, bila ada feedback <code class="language-plaintext highlighter-rouge">PONG</code> berarti redis client telah terhubung dengan redis server.</p>
+
+<p align="center">
+  <img src="/assets/images/redis/redis-02-connection-check.png" alt="Cek Koneksi Redis Client dengan Redis Server" title="Cek Koneksi Redis Client dengan Redis Server" />
+</p>
+
+<hr />
+
+<p>Apabila ketika masuk ke interface redis-cli ternyata tampilannya seperti ini</p>
+
+<p align="center">
+  <img src="/assets/images/redis/redis-02-connection-refused.png" alt="Redis Server Connection Refused" title="Redis Server Connection Refused" />
+</p>
+
+<p>Aktifkan terlebih dahulu service redis-server dengan perintah <code class="language-plaintext highlighter-rouge">sudo systemctl start redis-server</code>, untuk mengecek statusnya bisa dengan perintah <code class="language-plaintext highlighter-rouge">sudo systemctl status redis-server</code>, jika statusnya running berarti redis-server telah berhasil aktif.</p>
+
+<p align="center">
+  <img src="/assets/images/redis/redis-02-activate-redis-server.png" alt="Aktivasi Service Redis Server" title="Aktivasi Service Redis Server" />
+</p>
+
+</article>
+
+<!--  -->
+    </main>
+    
+    <hr>
+    <footer class="footer">
+      <small>
+        &copy; Zuhdi Fikri
+        <time datetime="2022-05-07T11:04:26+07:00">2022</time>. All rights reserved.
+      </small>
+    </footer>
+  </div>
+
+  
+</body>
+
+</html>

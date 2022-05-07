@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-# 👦️ About
+# 👦️ Tentang Saya
 
 Mas-mas Jogja yang suka ngopi, seorang [IN](/notes)TJ juga, mari terhubung!
 - [Medium](https://ikkifik.medium.com/) 

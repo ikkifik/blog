@@ -1,5 +1,5 @@
 # Setup
-title: "Re:"
+title: "Re:L"
 url: https://ikkifik.github.io/
 paginate: 1
 baseurl: ""
@@ -40,13 +40,18 @@ author:
 version: 3.0.0
 
 # Navbar page list
+# TODO: create sublink https://mycyberuniverse.com/jekyll-bootstrap-dynamic-navigation-highlighting-active-element.html
 nav:
   - title: Artikel
     url: /articles
   - title: Project
     url: /project
-  - title: Tentang
-    url: /about
+  - title: Lainnya
+    sublinks:
+      - title: Buku
+        url: /books
+      - title: Tentang
+        url: /about
 
 collections:
   notes:
