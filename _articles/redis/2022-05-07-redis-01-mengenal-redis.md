@@ -4,6 +4,10 @@ categories: "Redis"
 tags: "Redis"
 ---
 
+<p align="center">
+  <img src="/assets/images/redis/redis-logo.png" alt="Logo Redis" title="Logo Redis" class="logo-topic" />
+</p>
+
 Redis adalah kata singkatan dari Remote Dictionary Server yang termasuk dalam keluarga NoSQL database berjenis key-value database. Redis menyimpan data-datanya di dalam memori atau RAM yang dikenal dengan in-memory database, sehingga proses menyimpan dan menerima data dapat berlangsung sangat cepat. Database ini dibuat oleh seorang pria asal Sicily, Italia bernama Salvatore Sanﬁlippo.  
 
 ![Salvatore Sanﬁlippo - Founder Redis](/assets/images/redis/redis-01-founder.png)

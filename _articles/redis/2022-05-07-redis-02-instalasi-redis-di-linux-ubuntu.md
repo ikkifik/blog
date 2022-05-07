@@ -4,6 +4,10 @@ categories: "Redis"
 tags: "Redis"
 ---
 
+<p align="center">
+  <img src="/assets/images/redis/redis-logo.png" alt="Logo Redis" title="Logo Redis" class="logo-topic" />
+</p>
+
 Setelah mengenal sekilas tentang apa itu redis dan konsep databasenya, sekarang kita akan coba install redis di Ubuntu 20.04 melalui Ubuntu official PPA menggunakan apt. Buka terminal dengan `ctrl + alt + t` ikuti langkah di bawah ini.
 
 Tambahkan repository redis
