@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Catatan
+title: Project
 ---
 
 # 💻️ Project
