@@ -26,7 +26,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Home" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/","headline":"Home","author":{"@type":"Person","name":"Ikkifik"},"name":"Re:L","@type":"WebSite","@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Ikkifik"},"url":"http://localhost:4000/","headline":"Home","name":"Re:L","@type":"WebSite","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -41,71 +41,129 @@
         <nav class="nav">
           
 
-          
+          <!--  -->
           <small><a href="/articles" class="underline">Artikel</a></small>
-          
+          <!--  -->
           
 
-          
+          <!--  -->
           <small><a href="/project" class="underline">Project</a></small>
-          
+          <!--  -->
           
 
+          <!--  -->
+          <small><a href="/books" class="underline">Buku</a></small>
+          <!--  -->
           
-          <div class="dropdown">
-            <small><a href="#" class="underline">Lainnya</a></small>
-            <div class="dropdown-content">
-              
-              <small><a href="/books">Buku</a></small>
-              
-              <small><a href="/about">Tentang</a></small>
-              
-            </div>
-          </div>
-          
-          
+          <small><a href="/assets/document/CV-Zuhdi_Fikri.pdf" class="underline" target="_blank">CV</a></small>
         </nav>
       </h3>
     </header>
 
     <main>
-      <h1>Assalamu'alaikum, halo! 😉️</h1>
-<p>Selamat datang pembaca, terimakasih sudah berkunjung.</p>
+      <div class="photohome">
+  <img src="/assets/images/home/photo-profile-zuhdi-fikri-blog.jpg" alt="photo-profile-zuhdi-fikri-blog.jpg">
+</div>
 
+<h1 class="namehome">Zuhdi Fikri</h1>
+<hr>
 
-  <br>
+<!-- Rounded switch -->
+<label class="switch">
+  <input type="checkbox" id="checklangbtn" onclick="checkLang()">
+  <span class="slider round" id="slider" data-before="en"></span>
+</label>
 
-  <br>
+<div id="en-intro">
+  <p><i>Assallamu'alaikum</i>, hello, I am <b>Fikri</b>.</p>
+  <p>I like <a href="/notes">writing</a>, sometimes do reading, and also experimenting. Here in my blog, I want to share
+    everything
+    that I already got along my study journey.</p>
+  <p>You can found me on other platform like, <a href="https://www.linkedin.com/in/muhammad-zuhdi-fikri-johari/"
+      target="_blank" rel="noopener noreferrer" class="profile-link">LinkedIn</a> for my
+    professional page, <a href="https://ikkifik.medium.com/" target="_blank" rel="noopener noreferrer"
+      class="profile-link">Medium</a> for
+    another blog platform, and <a href="https://github.com/ikkifik" target="_blank" rel="noopener noreferrer"
+      class="profile-link">Github</a> repository for storing my
+    latest personal project. </p>
+</div>
 
-  <br>
+<div id="id-intro" hidden>
+  <p><i>Assallamu'alaikum</i>, halo, perkenalkan saya <b>Fikri</b>.</p>
+  <p>Saya memiliki kegemaran <a href="/notes">menulis</a>, membaca, dan bereksperimen. Blog ini sebagai media berbagi
+    dari apa yang telah saya dapat selama perjalanan belajar saya.</p>
+  <p>Temui saya di platform lain seperti, <a href="https://www.linkedin.com/in/muhammad-zuhdi-fikri-johari/"
+      target="_blank" rel="noopener noreferrer" class="profile-link">LinkedIn</a> untuk informasi dengan format formal,
+    <a href="https://ikkifik.medium.com/" target="_blank" rel="noopener noreferrer" class="profile-link">Medium</a>
+    untuk membaca tulisan saya yang lain, dan <a href="https://github.com/ikkifik" target="_blank"
+      rel="noopener noreferrer" class="profile-link">Github</a> sebagai repository penyimpanan proyek saya yang terbaru.
+  </p>
+</div>
 
-  <br>
+<br>
 
-  <br>
-
-  <br>
-
-  <br>
-
-  <br>
-
-  <br>
-
-  <br>
-
+<h3>Update</h3>
+<ul>
+  <li>[08/06/22] Adding language switch button for introduction on homepage.</li>
+<li>[07/06/22] Update blog layout, adding some static content.</li>
+</ul>
 
     </main>
-    
+
     <hr>
     <footer class="footer">
       <small>
         &copy; Zuhdi Fikri
-        <time datetime="2022-05-07T14:43:25+07:00">2022</time>. All rights reserved.
+        <time datetime="2022-06-08T20:54:32+07:00">2022</time>
+        - Made with ❤️ using <a href="https://jekyllrb.com/">Jekyll 4.2.1</a>
       </small>
     </footer>
   </div>
 
   
+  <script>
+  function addLink() {
+    //Get the selected text and append the extra info
+    var selection = window.getSelection();
+    pagelink = "<br><br>" + "Read more at: " + document.location.href;
+    copytext = selection + pagelink;
+    //Create a new div to hold the prepared text
+    newdiv = document.createElement('div');
+
+    //hide the newly created container
+    newdiv.style.position = 'absolute';
+    newdiv.style.left = '-99999px';
+
+    //insert the container, fill it with the extended text, and define the new selection
+    document.body.appendChild(newdiv);
+    newdiv.innerHTML = copytext;
+    selection.selectAllChildren(newdiv);
+
+    window.setTimeout(function () {
+      document.body.removeChild(newdiv);
+    }, 100);
+    
+  }
+  document.addEventListener('copy', addLink);
+
+</script>
+
+  <script>
+  function checkLang() {
+    var check = document.getElementById("checklangbtn");
+    var slider = document.getElementById("slider");
+    if (check.checked == true) {
+      slider.setAttribute('data-before', 'id')
+      document.getElementById("id-intro").hidden = false;
+      document.getElementById("en-intro").hidden = true;
+    } else {
+      slider.setAttribute('data-before', 'en')
+      document.getElementById("id-intro").hidden = true;
+      document.getElementById("en-intro").hidden = false;
+    }
+  }
+</script>
+
 </body>
 
 </html>

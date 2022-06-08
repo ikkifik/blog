@@ -28,6 +28,12 @@
 @import "pagination";
 @import "message";
 @import "toc";
+@import "sliderbtn";
+
+$outline-highlight: #e6bc01;
+$home-image-size: 220px;
+$home-image-size-m: 200px;
+
 
 // Sass for creating the swatches
 .colors {
@@ -57,7 +63,7 @@ a {
 }
 
 nav a:hover {
-  color: #FFFF;
+  color: white;
 }
 
 .underline{
@@ -67,18 +73,17 @@ nav a:hover {
 .underline::before{
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   right: 0;
   width: 0;
   height: 3px;
-  background-color: #FFFF;
+  background-color: $outline-highlight;
   transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .highlighter-rouge {
   background-color: rgb(19, 19, 19);
 }
-
 
 .dropbtn {
   padding: 16px;
@@ -119,6 +124,36 @@ nav a:hover {
   display: block;
 }
 
+.photohome {
+  width:$home-image-size;
+  float:left;
+  margin:auto 2em auto 0;
+  position: relative;
+}
+
+.photohome::after {
+  content:'';
+  background-color:$outline-highlight;
+  width:$home-image-size;
+  height:$home-image-size;
+  z-index: -1;
+  position: absolute;
+  left: 0.7rem;
+  top: 0.7rem;
+  border-radius: 5px;
+}
+
+footer small {
+  display: block;
+  text-align: center;  
+}
+
+.profile-link {
+  text-decoration-line: underline;
+  text-decoration-color: $outline-highlight;
+  text-decoration-thickness: 2px;
+  text-decoration-style: solid;
+}
 
 @media (hover: hover) and (pointer: fine) {
   .underline:hover::before{
@@ -132,5 +167,26 @@ nav a:hover {
   a.title {
     display: block;
     margin-bottom: 0.5em;
+  }
+  h1.namehome {
+    text-align: center;
+    display: block;
+  }
+  .photohome {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    width:$home-image-size-m;
+  }
+  .photohome::after {
+    content:'';
+    background-color:$outline-highlight;
+    width:$home-image-size-m;
+    height:$home-image-size-m;
+    z-index: -1;
+    position: absolute;
+    left: 0.7rem;
+    top: 0.7rem;
+    border-radius: 5px;
   }
 }

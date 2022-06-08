@@ -26,7 +26,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Artikel" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/articles","headline":"Artikel","author":{"@type":"Person","name":"Ikkifik"},"@type":"WebPage","@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Ikkifik"},"url":"http://localhost:4000/articles","headline":"Artikel","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -41,29 +41,21 @@
         <nav class="nav">
           
 
-          
+          <!--  -->
           <small><a href="/articles" class="underline">Artikel</a></small>
-          
+          <!--  -->
           
 
-          
+          <!--  -->
           <small><a href="/project" class="underline">Project</a></small>
-          
+          <!--  -->
           
 
+          <!--  -->
+          <small><a href="/books" class="underline">Buku</a></small>
+          <!--  -->
           
-          <div class="dropdown">
-            <small><a href="#" class="underline">Lainnya</a></small>
-            <div class="dropdown-content">
-              
-              <small><a href="/books">Buku</a></small>
-              
-              <small><a href="/about">Tentang</a></small>
-              
-            </div>
-          </div>
-          
-          
+          <small><a href="/assets/document/CV-Zuhdi_Fikri.pdf" class="underline" target="_blank">CV</a></small>
         </nav>
       </h3>
     </header>
@@ -71,7 +63,8 @@
     <main>
       <h1 id="️-artikel">💡️ Artikel</h1>
 
-<p>Halaman untuk sharing ilmu. Gunakan <mark>Ctrl+F</mark> untuk mencari judul materi.</p>
+<p>Karena memulai adalah hal yang berat, mari kita mulai dengan yang ringan-ringan.<br />
+Gunakan <mark>Ctrl+F</mark> untuk mencari judul materi.</p>
 
 <p>Daftar topik yang tersedia: <br /><mark><a href="#Kepenulisan">#Kepenulisan(4)</a></mark> <mark><a href="#Others">#Others(2)</a></mark> <mark><a href="#R">#R(9)</a></mark> <mark><a href="#MongoDB">#MongoDB(5)</a></mark> <mark><a href="#Virtual-Lab">#Virtual Lab(1)</a></mark> <mark><a href="#Redis">#Redis(2)</a></mark></p>
 
@@ -157,17 +150,61 @@
 
 
     </main>
-    
+
     <hr>
     <footer class="footer">
       <small>
         &copy; Zuhdi Fikri
-        <time datetime="2022-05-07T14:43:25+07:00">2022</time>. All rights reserved.
+        <time datetime="2022-06-08T20:54:32+07:00">2022</time>
+        - Made with ❤️ using <a href="https://jekyllrb.com/">Jekyll 4.2.1</a>
       </small>
     </footer>
   </div>
 
   
+  <script>
+  function addLink() {
+    //Get the selected text and append the extra info
+    var selection = window.getSelection();
+    pagelink = "<br><br>" + "Read more at: " + document.location.href;
+    copytext = selection + pagelink;
+    //Create a new div to hold the prepared text
+    newdiv = document.createElement('div');
+
+    //hide the newly created container
+    newdiv.style.position = 'absolute';
+    newdiv.style.left = '-99999px';
+
+    //insert the container, fill it with the extended text, and define the new selection
+    document.body.appendChild(newdiv);
+    newdiv.innerHTML = copytext;
+    selection.selectAllChildren(newdiv);
+
+    window.setTimeout(function () {
+      document.body.removeChild(newdiv);
+    }, 100);
+    
+  }
+  document.addEventListener('copy', addLink);
+
+</script>
+
+  <script>
+  function checkLang() {
+    var check = document.getElementById("checklangbtn");
+    var slider = document.getElementById("slider");
+    if (check.checked == true) {
+      slider.setAttribute('data-before', 'id')
+      document.getElementById("id-intro").hidden = false;
+      document.getElementById("en-intro").hidden = true;
+    } else {
+      slider.setAttribute('data-before', 'en')
+      document.getElementById("id-intro").hidden = true;
+      document.getElementById("en-intro").hidden = false;
+    }
+  }
+</script>
+
 </body>
 
 </html>

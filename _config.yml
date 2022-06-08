@@ -1,14 +1,14 @@
 # Setup
 title: "Re:L"
 url: https://ikkifik.github.io/
-paginate: 1
+# paginate: 1
 baseurl: ""
 permalink: /:categories/:year/:month/:day/:title
 
 # Gems
 plugins:
   - jekyll-gist
-  - jekyll-paginate
+  # - jekyll-paginate
   - jekyll-seo-tag
 
 # Optimize Jekyll
@@ -33,7 +33,7 @@ sass:
 # Specify the author for blog posts
 author:
   name: Ikkifik
-  url: https://twitter.com/
+  url: zuhdifikri.my.id
   email: mzfikrij@gmail.com
 
 # Custom vars
@@ -46,12 +46,14 @@ nav:
     url: /articles
   - title: Project
     url: /project
-  - title: Lainnya
-    sublinks:
-      - title: Buku
-        url: /books
-      - title: Tentang
-        url: /about
+  - title: Buku
+    url: /books
+  # - title: Lainnya
+  #   sublinks:
+  #     - title: Buku
+  #       url: /books
+  #     - title: Tentang
+  #       url: /about
 
 collections:
   notes:

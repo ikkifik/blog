@@ -2,9 +2,48 @@
 layout: default
 title: Home
 ---
-<h1>Assalamu'alaikum, halo! 😉️</h1>
-<p>Selamat datang pembaca, terimakasih sudah berkunjung.</p>
+<div class="photohome">
+  <img src="/assets/images/home/photo-profile-zuhdi-fikri-blog.jpg" alt="photo-profile-zuhdi-fikri-blog.jpg">
+</div>
 
-{% for i in (1..10) %}
-  <br>
-{% endfor %}
+<h1 class="namehome">Zuhdi Fikri</h1>
+<hr>
+
+<!-- Rounded switch -->
+<label class="switch">
+  <input type="checkbox" id="checklangbtn" onclick="checkLang()">
+  <span class="slider round" id="slider" data-before="en"></span>
+</label>
+
+<div id="en-intro">
+  <p><i>Assallamu'alaikum</i>, hello, I am <b>Fikri</b>.</p>
+  <p>I like <a href="/notes">writing</a>, sometimes do reading, and also experimenting. Here in my blog, I want to share
+    everything
+    that I already got along my study journey.</p>
+  <p>You can found me on other platform like, <a href="https://www.linkedin.com/in/muhammad-zuhdi-fikri-johari/"
+      target="_blank" rel="noopener noreferrer" class="profile-link">LinkedIn</a> for my
+    professional page, <a href="https://ikkifik.medium.com/" target="_blank" rel="noopener noreferrer"
+      class="profile-link">Medium</a> for
+    another blog platform, and <a href="https://github.com/ikkifik" target="_blank" rel="noopener noreferrer"
+      class="profile-link">Github</a> repository for storing my
+    latest personal project. </p>
+</div>
+
+<div id="id-intro" hidden>
+  <p><i>Assallamu'alaikum</i>, halo, perkenalkan saya <b>Fikri</b>.</p>
+  <p>Saya memiliki kegemaran <a href="/notes">menulis</a>, membaca, dan bereksperimen. Blog ini sebagai media berbagi
+    dari apa yang telah saya dapat selama perjalanan belajar saya.</p>
+  <p>Temui saya di platform lain seperti, <a href="https://www.linkedin.com/in/muhammad-zuhdi-fikri-johari/"
+      target="_blank" rel="noopener noreferrer" class="profile-link">LinkedIn</a> untuk informasi dengan format formal,
+    <a href="https://ikkifik.medium.com/" target="_blank" rel="noopener noreferrer" class="profile-link">Medium</a>
+    untuk membaca tulisan saya yang lain, dan <a href="https://github.com/ikkifik" target="_blank"
+      rel="noopener noreferrer" class="profile-link">Github</a> sebagai repository penyimpanan proyek saya yang terbaru.
+  </p>
+</div>
+
+<br>
+
+<h3>Update</h3>
+<ul>
+  {% include news_update.html %}
+</ul>

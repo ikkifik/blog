@@ -1,0 +1,15 @@
+<script>
+  function checkLang() {
+    var check = document.getElementById("checklangbtn");
+    var slider = document.getElementById("slider");
+    if (check.checked == true) {
+      slider.setAttribute('data-before', 'id')
+      document.getElementById("id-intro").hidden = false;
+      document.getElementById("en-intro").hidden = true;
+    } else {
+      slider.setAttribute('data-before', 'en')
+      document.getElementById("id-intro").hidden = true;
+      document.getElementById("en-intro").hidden = false;
+    }
+  }
+</script>
