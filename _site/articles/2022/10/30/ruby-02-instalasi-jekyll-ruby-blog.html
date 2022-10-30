@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark-poole">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    
+      Ruby: 02 Instalasi Jekyll - Ruby Static Site Generator(SSG) &middot; Re:L
+    
+  </title>
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="Re:L" href="/atom.xml">
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="Ruby: 02 Instalasi Jekyll - Ruby Static Site Generator(SSG)" />
+<meta name="author" content="Ikkifik" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Setelah ruby berhasil terpasang, langkah selanjutnya yaitu memasang jekyll. Karena saya sedang malas berbasa-basi tapi ingin menulis, jadi kalimat pembukanya sampai di sini saja ya, hehe." />
+<meta property="og:description" content="Setelah ruby berhasil terpasang, langkah selanjutnya yaitu memasang jekyll. Karena saya sedang malas berbasa-basi tapi ingin menulis, jadi kalimat pembukanya sampai di sini saja ya, hehe." />
+<link rel="canonical" href="http://localhost:4000/articles/2022/10/30/ruby-02-instalasi-jekyll-ruby-blog" />
+<meta property="og:url" content="http://localhost:4000/articles/2022/10/30/ruby-02-instalasi-jekyll-ruby-blog" />
+<meta property="og:site_name" content="Re:L" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-10-30T00:00:00+07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Ruby: 02 Instalasi Jekyll - Ruby Static Site Generator(SSG)" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/articles/2022/10/30/ruby-02-instalasi-jekyll-ruby-blog","dateModified":"2022-10-30T00:00:00+07:00","datePublished":"2022-10-30T00:00:00+07:00","headline":"Ruby: 02 Instalasi Jekyll - Ruby Static Site Generator(SSG)","@type":"BlogPosting","author":{"@type":"Person","name":"Ikkifik"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/articles/2022/10/30/ruby-02-instalasi-jekyll-ruby-blog"},"description":"Setelah ruby berhasil terpasang, langkah selanjutnya yaitu memasang jekyll. Karena saya sedang malas berbasa-basi tapi ingin menulis, jadi kalimat pembukanya sampai di sini saja ya, hehe.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y0RK875LY8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y0RK875LY8');
+</script>
+  
+</head>
+
+
+<body>
+  <div class="container content">
+    <header class="masthead">
+      <h3 class="masthead-title">
+        <a href="/" title="Home" class="title">Re:L</a>
+
+        <nav class="nav">
+          
+
+          <!--  -->
+          <small><a href="/articles" class="underline">Artikel</a></small>
+          <!--  -->
+          
+
+          <!--  -->
+          <small><a href="/project" class="underline">Project</a></small>
+          <!--  -->
+          
+
+          <!--  -->
+          <small><a href="/books" class="underline">Buku</a></small>
+          <!--  -->
+          
+          <small><a href="/assets/document/CV-Zuhdi_Fikri.pdf" class="underline" target="_blank">CV</a></small>
+        </nav>
+      </h3>
+    </header>
+
+    <main>
+      <article class="post">
+  <h1 class="post-title">Ruby: 02 Instalasi Jekyll - Ruby Static Site Generator(SSG)</h1>
+  <time datetime="2022-10-30T00:00:00+07:00" class="post-date">30 Oct 2022</time>
+  <p>Setelah ruby berhasil terpasang, langkah selanjutnya yaitu memasang jekyll. Karena saya sedang malas berbasa-basi tapi ingin menulis, jadi kalimat pembukanya sampai di sini saja ya, hehe.</p>
+
+<p>Instalasi masih dilakukan di OS yang sama yaitu Ubuntu 22.04 (source: <a href="https://jekyllrb.com/docs/installation/">jekyllrb</a>).</p>
+
+<hr />
+
+<h3 id="set-default-path-gem">Set default path gem</h3>
+
+<p>Perintah berikut akan menambahkan environment variable gem pada file .bashrc (.zshrc apabila terminal menggunakan zsh)</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s1">'# Install Ruby Gems to ~/gems'</span> <span class="o">&gt;&gt;</span> ~/.bashrc <span class="c"># if you use zsh, change .bashrc &gt; .zshrc</span>
+<span class="nb">echo</span> <span class="s1">'export GEM_HOME="$HOME/gems"'</span> <span class="o">&gt;&gt;</span> ~/.bashrc <span class="c"># if you use zsh, change .bashrc &gt; .zshrc</span>
+<span class="nb">echo</span> <span class="s1">'export PATH="$HOME/gems/bin:$PATH"'</span> <span class="o">&gt;&gt;</span> ~/.bashrc <span class="c"># if you use zsh, change .bashrc &gt; .zshrc</span>
+<span class="nb">source</span> ~/.bashrc
+</code></pre></div></div>
+
+<hr />
+<h3 id="install-jekyll-dengan-gem">Install jekyll dengan gem</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install jekyll melalui gem</span>
+gem <span class="nb">install </span>jekyll
+
+<span class="c"># (opsional) Install bundler gem manager, apabila belum terinstal</span>
+gem <span class="nb">install </span>bundler
+</code></pre></div></div>
+
+<hr />
+<p><strong>Catatan kaki:</strong> apabila sudah mengikuti instalasi ruby pada tulisan sebelumnya, bundler sudah kita pasang, jadi tidak perlu memasang bundler kembali</p>
+
+</article>
+
+<!--  -->
+    </main>
+
+    <hr>
+    <footer class="footer">
+      <small>
+        &copy; Zuhdi Fikri
+        <time datetime="2022-10-30T07:41:23+07:00">2022</time>
+        - Made with ❤️ using <a href="https://jekyllrb.com/">Jekyll 4.2.1</a>
+      </small>
+    </footer>
+  </div>
+
+  <script>
+  function addLink() {
+    //Get the selected text and append the extra info
+    var selection = window.getSelection();
+    pagelink = "<br><br>" + "Read more at: " + document.location.href;
+    copytext = selection + pagelink;
+    //Create a new div to hold the prepared text
+    newdiv = document.createElement('div');
+
+    //hide the newly created container
+    newdiv.style.position = 'absolute';
+    newdiv.style.left = '-99999px';
+
+    //insert the container, fill it with the extended text, and define the new selection
+    document.body.appendChild(newdiv);
+    newdiv.innerHTML = copytext;
+    selection.selectAllChildren(newdiv);
+
+    window.setTimeout(function () {
+      document.body.removeChild(newdiv);
+    }, 100);
+    
+  }
+  document.addEventListener('copy', addLink);
+
+</script>
+
+  <script>
+  function checkLang() {
+    var check = document.getElementById("checklangbtn");
+    var slider = document.getElementById("slider");
+    if (check.checked == true) {
+      slider.setAttribute('data-before', 'id')
+      document.getElementById("id-intro").hidden = false;
+      document.getElementById("en-intro").hidden = true;
+    } else {
+      slider.setAttribute('data-before', 'en')
+      document.getElementById("id-intro").hidden = true;
+      document.getElementById("en-intro").hidden = false;
+    }
+  }
+</script>
+
+</body>
+
+</html>
