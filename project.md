@@ -7,6 +7,11 @@ title: Project
 
 This page contains all project that I have been working, the content will be delivered in english.
 
+<h3>Publications</h3>
+<ul>
+  {% include publications.html %}
+</ul>
+
 {% assign postsByCategories = site.project | sort | group_by_exp: "post", "post.categories"  %}
 {% for categories in postsByCategories %}
   <h3 id="{{ categories.name }}">{{ categories.name[0] | replace: "-", " "}}</h3>

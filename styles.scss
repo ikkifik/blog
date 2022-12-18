@@ -155,6 +155,11 @@ footer small {
   text-decoration-style: solid;
 }
 
+.author-highlight {
+  font-style: normal;
+  color: $outline-highlight;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .underline:hover::before{
     left: 0;
