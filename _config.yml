@@ -46,8 +46,8 @@ nav:
     url: /articles
   - title: Project
     url: /project
-  - title: Buku
-    url: /books
+  # - title: Buku
+  #   url: /books
   # - title: Lainnya
   #   sublinks:
   #     - title: Buku
