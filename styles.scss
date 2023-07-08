@@ -161,12 +161,12 @@ footer small {
 }
 
 .collaborator-highlight {
-  text-decoration: underline;
-  color: rgb(230, 230, 230);
+  color: rgb(240, 240, 240);
 }
 
 .collaborator-highlight:hover {
   color: $outline-highlight;
+  font-style: italic;
 }
 
 ul#resint li {
