@@ -160,6 +160,31 @@ footer small {
   color: $outline-highlight;
 }
 
+.collaborator-highlight {
+  text-decoration: underline;
+  color: rgb(230, 230, 230);
+}
+
+.collaborator-highlight:hover {
+  color: $outline-highlight;
+}
+
+ul#resint li {
+  display:inline;
+}
+
+ul#resint li:hover {
+  color: $outline-highlight;
+}
+
+ul#resint li:hover::after {
+  color: rgb(202, 202, 202);
+}
+
+ul#resint li:not(:last-child):after {
+  content: " |";
+}
+
 @media (hover: hover) and (pointer: fine) {
   .underline:hover::before{
     left: 0;
