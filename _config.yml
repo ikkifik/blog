@@ -46,8 +46,8 @@ nav:
     url: /articles
   - title: Project
     url: /project
-  - title: Agenda
-    url: /agenda
+  # - title: Agenda
+  #   url: /agenda
   # - title: Buku
   #   url: /books
   # - title: Lainnya
