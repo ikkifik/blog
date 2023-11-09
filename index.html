@@ -9,18 +9,20 @@ title: Home
 <h1 class="namehome">Muhammad Zuhdi Fikri Johari</h1>
 <hr>
 
-<!-- Rounded switch -->
-<label class="switch">
-  <input type="checkbox" id="checklangbtn" onclick="checkLang()">
-  <span class="slider round" id="slider" data-before="en"></span>
-</label>
+{% include intro.html %}
 
-{% include en_intro.html %}
-{% include id_intro.html %}
-
-<strong>Email</strong>: <i>{second_name}.{third_name}</i>@students.amikom.ac.id
-
-<br />
+<div id="intro-contact">
+  <p>
+    <strong>Email</strong>: <i>{second_name}.{third_name}</i>@students.amikom.ac.id
+  </p>
+  <p>
+    <strong>Also find me on</strong>:
+    <a href="https://www.linkedin.com/in/muhammad-zuhdi-fikri-johari/" target="_blank" rel="noopener noreferrer" class="profile-link">LinkedIn</a>
+    <a href="https://ikkifik.medium.com/" target="_blank" rel="noopener noreferrer" class="profile-link">Medium</a>
+    <a href="https://github.com/ikkifik" target="_blank" rel="noopener noreferrer" class="profile-link">Github</a>
+    <a href="https://scholar.google.com/citations?user=MhGfsr8AAAAJ&hl=id&oi=ao" target="_blank" rel="noopener noreferrer" class="profile-link">Google Scholar</a>
+  </p>
+</div>
 
 {% include current_activities.html %}
 {% include research_interest.html %}

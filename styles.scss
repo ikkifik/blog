@@ -185,6 +185,17 @@ ul#resint li:not(:last-child):after {
   content: " |";
 }
 
+div#intro-contact {
+  text-align: center;
+  background-color: #59595935;
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  p {
+    margin: 0;
+  }
+}
+
 @media (hover: hover) and (pointer: fine) {
   .underline:hover::before{
     left: 0;
