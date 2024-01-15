@@ -1,6 +1,6 @@
 ---
 title: "FB Automate Group Leave"
-categories: "Personal-Project"
+categories: "Tools"
 ---
 
 I create this project in order to my "Re:L" project, which I use to trying re-arrange my life. One of the ways to do that is to "clean up" my social media account so I can start again without actually restarting from scratch.  

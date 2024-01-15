@@ -24,7 +24,7 @@
 
   <title>
     
-      MongoDB: 03 Mengoperasikan mongodb pertama kali - Mongosh &middot; Re:L
+      Publications &middot; Re:L
     
   </title>
 
@@ -35,18 +35,16 @@
 
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <meta name="generator" content="Jekyll v4.2.1" />
-<meta property="og:title" content="MongoDB: 03 Mengoperasikan mongodb pertama kali - Mongosh" />
+<meta property="og:title" content="Publications" />
 <meta name="author" content="Ikkifik" />
 <meta property="og:locale" content="en_US" />
-<link rel="canonical" href="http://localhost:4000/articles/2022/01/16/mongodb-03-mengoperasikan-mongosh" />
-<meta property="og:url" content="http://localhost:4000/articles/2022/01/16/mongodb-03-mengoperasikan-mongosh" />
+<link rel="canonical" href="http://localhost:4000/publications" />
+<meta property="og:url" content="http://localhost:4000/publications" />
 <meta property="og:site_name" content="Re:L" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-01-16T00:00:00+07:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="MongoDB: 03 Mengoperasikan mongodb pertama kali - Mongosh" />
+<meta property="twitter:title" content="Publications" />
 <script type="application/ld+json">
-{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/articles/2022/01/16/mongodb-03-mengoperasikan-mongosh"},"url":"http://localhost:4000/articles/2022/01/16/mongodb-03-mengoperasikan-mongosh","author":{"@type":"Person","name":"Ikkifik"},"@type":"BlogPosting","headline":"MongoDB: 03 Mengoperasikan mongodb pertama kali - Mongosh","dateModified":"2022-01-16T00:00:00+07:00","datePublished":"2022-01-16T00:00:00+07:00","@context":"https://schema.org"}</script>
+{"url":"http://localhost:4000/publications","author":{"@type":"Person","name":"Ikkifik"},"@type":"WebPage","headline":"Publications","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -92,43 +90,46 @@
     </header>
 
     <main>
-      <article class="post">
-  <h1 class="post-title">MongoDB: 03 Mengoperasikan mongodb pertama kali - Mongosh</h1>
-  <time datetime="2022-01-16T00:00:00+07:00" class="post-date">16 Jan 2022</time>
-  <p align="center">
-  <img src="/assets/images/mongodb/mongodb-logo.png" alt="Logo MongoDB" class="logo-topic" title="Logo MongoDB" />
-</p>
+      <h1 id="-publications">📜 Publications</h1>
 
-<p>Untuk mengoperasikan mongodb kita dapat gunakan mongodb shell atau dikenal dengan <code class="language-plaintext highlighter-rouge">mongosh</code>. <code class="language-plaintext highlighter-rouge">Mongosh</code> secara singkat adalah environment yang dibangun menggunakan javascript dan node.js untuk berinteraksi dengan mongodb, kita bisa gunakan mongosh untuk melakukan operasi dan query pada mongodb.</p>
+<ul style="margin-top: 2rem;">
+  <!-- <li style="margin-bottom: 1rem;">
+    <a href="#">
+        <strong>GIS data support technique for forest fire management and decision support system: A Sebangau National Park, Kalimantan case</strong> <i>(accepted)</i>
+    </a>
+    <br />
+    <em>2023, 6th International Conference on Information and Communications Technology (ICOIACT)</em>
+</li> -->
+<li style="margin-bottom: 1rem;">
+    <a href="https://doi.org/10.1109/ICPRS58416.2023.10179001" target="_blank">
+        <strong>Machine Learning and Social Media Harvesting for Wildfire Prevention</strong>
+    </a>
+    <br />
+    <!-- Arif Dwi Laksito, Kusrini Kusrini, Arief Setyanto, <i class="author-highlight">Muhammad Zuhdi Fikri Johari</i>, 
+    Zauvik Rizaldi Maruf, Kumara Ari Yuana, Gardyas Bidari Adninda, Renindya Azizza Kartikakirana, 
+    Fitria Nucifera, Wiwi Widayani, Krishna Chandramouli, Ebroul Ezquierdo<br /> -->
+    <em>2023, 13th International Conference on Pattern Recognition Systems (ICPRS)</em>
+</li>
+<li style="margin-bottom: 1rem;">
+    <a href="https://doi.org/10.1109/ICITISEE57756.2022.10057604" target="_blank">
+        <strong>Monte Carlo Method For Map Area Calculation In Wildland Fire Map Management</strong>
+    </a>
+    <br />
+    <!-- Kumara Ari Yuana, Kusrini Kusrini, Arief Setyanto, Arif Dwi Laksito, Zauvik Rizaldi Maruf, <i class="author-highlight">Muhammad Zuhdi Fikri Johari</i>, 
+    Gardyas Bidari Adninda, Renindya Azizza Kartikakirana, Rhisa Aidilla Suprapto, Prasetyo Mimboro, Wiwi Widayani<br /> -->
+    <em>2022, 6th International Conference on Information Technology, Information Systems and Electrical Engineering (ICITISEE)</em>
+</li>
+<li style="margin-bottom: 1rem;">
+    <a href="https://doi.org/10.29207/resti.v5i5.3486" target="_blank">
+        <strong>The Hybrid Recommender System of the Indonesian Online Market Products using IMDb weight rating and TF-IDF</strong>
+    </a>
+    <br />
+    <!-- <i class="author-highlight">Muhammad Zuhdi Fikri Johari</i>, Arif Dwi Laksito<br /> -->
+    <em>2021, Jurnal Rekayasa Sistem dan Teknologi Informasi (RESTI)</em>
+</li>
 
-<p><code class="language-plaintext highlighter-rouge">Mongosh</code> juga sudah tersedia bersamaan dengan instalasi mongodb. Cara mengaktifkan <code class="language-plaintext highlighter-rouge">mongosh</code> hanya dengan mengetikkan kata <code class="language-plaintext highlighter-rouge">mongosh</code> di terminal.</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">Mongosh</code></pre></figure>
-
-<p align="center">
-  <img src="/assets/images/mongodb/mongodb-03-mengoperasikan-mongosh.png" alt="Mengoperasikan Mongosh" title="Mengoperasikan Mongosh" />
-</p>
-
-<p>Apabila pembaca menemukan di beberapa sumber yang menggunakan perintah <code class="language-plaintext highlighter-rouge">mongo</code> untuk berinteraksi dengan mongodb melalui terminal seperti gambar di bawah.</p>
-
-<p align="center">
-  <img src="/assets/images/mongodb/mongodb-03-mengoperasikan-mongo.png" alt="Mengoperasikan Mongo" title="Mengoperasikan Mongo" />
-</p>
-
-<p><code class="language-plaintext highlighter-rouge">Mongo</code> dan <code class="language-plaintext highlighter-rouge">Mongosh</code> pada intinya sama saja, sama-sama bisa digunakan untuk berinteraksi dengan database mongodb dan melakukan operasi di dalamnya.</p>
-
-<p>Melalui dokumentasi mongodb di <a href="https://docs.mongodb.com/mongodb-shell/#mongodb-binary-bin.mongosh">docs.mongodb.com</a>, mongosh (mongo shell) adalah versi terbaru dari mongo yang menawarkan fitur yang lebih baik, seperti:</p>
-<ul>
-  <li>Syntax highlighting;</li>
-  <li>Command history; dan</li>
-  <li>Logging.</li>
 </ul>
 
-<p>Pada artikel selanjutnya saya akan membawakan pembahasan menggunakan mongosh.</p>
-
-</article>
-
-<!--  -->
     </main>
 
     <hr>

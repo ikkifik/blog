@@ -7,10 +7,8 @@ title: Project
 
 This page contains all project that I have been working, the content will be delivered in english.
 
-<h3>Publications</h3>
-<ul>
-  {% include publications.html %}
-</ul>
+<h3>Crafting</h3>
+<i>Coming soon..</i>
 
 {% assign postsByCategories = site.project | sort | group_by_exp: "post", "post.categories"  %}
 {% for categories in postsByCategories %}
