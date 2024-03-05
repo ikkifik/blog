@@ -124,6 +124,12 @@ nav a:hover {
   display: block;
 }
 
+footer small {
+  display: block;
+  text-align: center;  
+}
+
+// self-defined
 .photohome {
   width:$home-image-size;
   float:left;
@@ -141,11 +147,6 @@ nav a:hover {
   left: 0.7rem;
   top: 0.7rem;
   border-radius: 5px;
-}
-
-footer small {
-  display: block;
-  text-align: center;  
 }
 
 .profile-link {
@@ -168,6 +169,12 @@ footer small {
   color: $outline-highlight;
   font-style: italic;
 }
+
+.home-icon {
+  font-size: 2.5rem;
+  margin: 0 0.5rem;
+}
+// self-defined
 
 ul#resint li {
   display:inline;
