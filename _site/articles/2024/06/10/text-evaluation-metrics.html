@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark-poole">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    
+      Text Extraction Evaluation Metrics: WER, CER, MER, Levensthein Distance &middot; Re:L
+    
+  </title>
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="Re:L" href="/atom.xml">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="Text Extraction Evaluation Metrics: WER, CER, MER, Levensthein Distance" />
+<meta name="author" content="Ikkifik" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/articles/2024/06/10/text-evaluation-metrics" />
+<meta property="og:url" content="http://localhost:4000/articles/2024/06/10/text-evaluation-metrics" />
+<meta property="og:site_name" content="Re:L" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-06-10T00:00:00+07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Text Extraction Evaluation Metrics: WER, CER, MER, Levensthein Distance" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/articles/2024/06/10/text-evaluation-metrics"},"url":"http://localhost:4000/articles/2024/06/10/text-evaluation-metrics","author":{"@type":"Person","name":"Ikkifik"},"@type":"BlogPosting","headline":"Text Extraction Evaluation Metrics: WER, CER, MER, Levensthein Distance","dateModified":"2024-06-10T00:00:00+07:00","datePublished":"2024-06-10T00:00:00+07:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y0RK875LY8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y0RK875LY8');
+</script>
+  
+</head>
+
+
+<body>
+  <div class="container content">
+    <header class="masthead">
+      <h3 class="masthead-title">
+        <a href="/" title="Home" class="title">Re:L</a>
+
+        <nav class="nav">
+          
+
+          <!--  -->
+          <small><a href="/articles" class="underline">Artikel</a></small>
+          <!--  -->
+          
+
+          <!--  -->
+          <small><a href="/project" class="underline">Project</a></small>
+          <!--  -->
+          
+
+          <!--  -->
+          <small><a href="/publications" class="underline">Pub.</a></small>
+          <!--  -->
+          
+          <small><a href="/assets/document/CV_Zuhdi_Fikri_Feb_2024.pdf" class="underline" target="_blank">CV</a></small>
+        </nav>
+      </h3>
+    </header>
+
+    <main>
+      <article class="post">
+  <h1 class="post-title">Text Extraction Evaluation Metrics: WER, CER, MER, Levensthein Distance</h1>
+  <time datetime="2024-06-10T00:00:00+07:00" class="post-date">10 Jun 2024</time>
+  <style>
+    p img {
+        margin: auto;
+    }
+</style>
+
+<p>Untuk mengukur seberapa jauh kualitas model teks ekstraksi entah berupa <em>speech-to-text</em> atau <em>image-to-text</em>. Kita dapat menerapkan beberapa <em>evaluation metrics</em> yang sudah umum digunakan: <em>Levensthein Distance</em>, <em>Word Error Rate (WER)</em>, <em>Character Error Rate (CER)</em>, dan <em>Match Error Rate (MER)</em>. Tulisan ini merupakan kliping dari eksplorasi yang saya temukan dari beberapa sumber di internet.</p>
+
+<p>Berhubung saya hanya akan “memasak” data berbentuk teks, maka bahan yang diperlukan hanya 2:</p>
+
+<ul>
+  <li>teks <strong><em>reference</em></strong> yang dibuat oleh manusia berperan sebagai <em>ground truth</em>; dan</li>
+  <li>teks <strong><em>hypothesis</em></strong> yaitu hasil ekstraksi oleh <em>model</em>.</li>
+</ul>
+
+<p>Konsep dari <em>evaluation metrics</em> ini dengan mencari seberapa banyak karakter yang berbeda atau salah atau bisa kita sebut <em>“error”</em> antara teks <em>reference</em> dengan teks <em>hypothesis</em>. Perbedaan atau <em>error</em> tersebut dapat dibagi menjadi 3 tipe:</p>
+
+<ol>
+  <li>
+    <p><strong>Substitution (S):</strong> apabila terdapat <strong>perubahan</strong> karakter/kata pada teks <em>hypothesis</em></p>
+  </li>
+  <li>
+    <p><strong>Insertion (I):</strong> apabila ditemukan <strong>tambahan</strong> karakter/kata pada teks <em>hypothesis</em></p>
+  </li>
+  <li>
+    <p><strong>Deletion (D):</strong> apabila terjadi <strong>hilang/berkurangnya</strong> karakter/kata pada teks <em>hypothesis</em></p>
+  </li>
+</ol>
+
+<table border="1" style="width: 80%; margin: 2em auto ;">
+    <tr>
+        <th></th>
+        <th style="text-align: center; ">Substitution</th>
+        <th style="text-align: center; "></th>
+        <th style="text-align: center; ">Insertion</th>
+        <th style="text-align: center; "></th>
+        <th style="text-align: center; "></th>
+        <th style="text-align: center; "></th>
+        <th style="text-align: center; ">Deletion</th>
+    </tr>
+    <tr>
+        <td><b>Reference</b></td>
+        <td style="text-align: center; ">Pak</td>
+        <td style="text-align: center; ">Budi</td>
+        <td style="text-align: center; "></td>
+        <td style="text-align: center; ">makan</td>
+        <td style="text-align: center; ">bakso</td>
+        <td style="text-align: center; ">malang</td>
+        <td style="text-align: center; ">enak</td>
+    </tr>
+    <tr>
+        <td><b>Hypothesis</b></td>
+        <td style="text-align: center; ">Dek</td>
+        <td style="text-align: center; ">Budi</td>
+        <td style="text-align: center; ">belum</td>
+        <td style="text-align: center; ">makan</td>
+        <td style="text-align: center; ">bakso</td>
+        <td style="text-align: center; ">malang</td>
+        <td style="text-align: center; "></td>
+    </tr>
+</table>
+
+<p>Pada contoh di atas dapat dilihat terdapat total 3 perubahan pada teks <em>hypothesis</em>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>S: Pak   =&gt;  Dek  
+I:       =&gt;  belum  
+D: enak  =&gt;  
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="levensthein-distance">Levensthein Distance</h2>
+<p>Levensthein distance termasuk ke dalam kategori <a href="https://en.wikipedia.org/wiki/Edit_distance">edit distance</a> yang merupakan sebuah cara untuk mengetahui perbedaan antara 2 teks/string dengan melihat jumlah perubahan (<em>edit</em>) <strong>karakter</strong> yang terjadi.</p>
+
+<p><img src="https://latex.codecogs.com/svg.latex?\Large&space;\color{White}LD=S+I+D" alt="LD=\frac{S+I+D}{n\,%20Karakter\,%20Reference" /></p>
+
+<p>Di mana:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>S = Jumlah substitution
+I = Jumlah insertion
+D = Jumlah deletion
+</code></pre></div></div>
+
+<p>Jadi:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>LD = 1 + 1 + 1
+LD = 3
+</code></pre></div></div>
+
+<h2 id="character-error-rate-cer">Character Error Rate (CER)</h2>
+<p>CER memiliki konsep yang cukup mirip dengan levensthein distance yang sama-sama memanfaatkan karakter sebagai pembanding. Namun, motivasi CER tidak hanya menghitung jumlah perubahan karakter saja, lebih jaun CER menghitung peluang terjadinya perubahan karakter pada teks <em>hypothesis</em> terhadap teks <em>reference</em>.</p>
+
+<p><img src="https://latex.codecogs.com/svg.latex?\Large&space;\color{White}CER=\frac{S+I+D}{n\,%20Reference}" alt="CER=\frac{S+I+D}{n\,%20Karakter\,%20Reference" /></p>
+
+<p>Di mana:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>          S = Jumlah substitution
+          I = Jumlah insertion
+          D = Jumlah deletion
+n Reference = Jumlah karakter dari keseluruhan kalimat
+</code></pre></div></div>
+
+<p>Jadi:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CER = (1 + 1 + 1) / 32
+CER = 0.09375
+</code></pre></div></div>
+
+<h2 id="word-error-rate-wer">Word Error Rate (WER)</h2>
+<p>Berbeda dengan metrics sebelumnya yang berfokus pada karakter, WER cenderung melihat dalam jangkauan yang lebar dengan melihat berdasarkan perubahan kata.</p>
+
+<p><img src="https://latex.codecogs.com/svg.latex?\Large&space;\color{White}WER=\frac{S+I+D}{n\,%20Reference}" alt="WER=\frac{S+I+D}{n\,%20Karakter\,%20Reference" /></p>
+
+<p>Di mana:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>          S = Jumlah substitution
+          I = Jumlah insertion
+          D = Jumlah deletion
+n Reference = Jumlah kata dari keseluruhan kalimat
+</code></pre></div></div>
+
+<p>Jadi:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>WER = (1 + 1 + 1) / 6
+WER = 0.5
+</code></pre></div></div>
+
+<h2 id="match-error-rate-mer">Match Error Rate (MER)</h2>
+<p>MER merupakan keterbalikan dari WER. MER bertujuan untuk menghitung seberapa banyak kata yang sama atau sesuai dengan teks <em>reference</em>.</p>
+
+<p><img src="https://latex.codecogs.com/svg.latex?\Large&space;\color{White}MER=\frac{S+I+D}{S+I+D+n\,%20Correct}" alt="MER=\frac{S+I+D}{n\,%20Karakter\,%20Correct" /></p>
+
+<p>Di mana:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>          S = Jumlah substitution
+          I = Jumlah insertion
+          D = Jumlah deletion
+  n Correct = Jumlah kata benar dari keseluruhan kalimat hypothesis
+</code></pre></div></div>
+
+<p>Jadi:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MER = (1 + 1 + 1) / (1 + 1 + 1) + 4
+MER = 3 / 3 + 4
+MER = 3 / 7
+MER = 0.428571
+</code></pre></div></div>
+
+<hr />
+<h4 id="catatan-kaki">Catatan Kaki:</h4>
+<p>Tulisan ini sebagai awal untuk mengenal salah sekian <em>evaluation metrics</em> yang cukup sering ditemui pada pembahasan NLP. Tentu penjelasan di atas terlalu singkat dan mudah, di balik sederhananya konsep di atas terdapat logika matriks dalam melakukan perbandingan antar teks.</p>
+
+<p>Apabila pembaca hendak mengetahui lebih lanjut saya sudah cantumkan sumber referensi di bawah, yang sekiranya dapat dikunjungi setelah membaca tulisan ini.</p>
+
+<hr />
+<h4 id="referensi">Referensi:</h4>
+
+<ul>
+  <li><a href="https://docs.kolena.com/metrics/wer-cer-mer/">WER, CER, and MER</a></li>
+  <li><a href="https://medium.com/@tam.tamanna18/deciphering-accuracy-evaluation-metrics-in-nlp-and-ocr-a-comparison-of-character-error-rate-cer-e97e809be0c8">Deciphering Accuracy: Evaluation Metrics in NLP and OCR- A Comparison of Character Error Rate (CER) and Word Error Rate (WER)</a></li>
+  <li><a href="https://medium.com/@johnidouglasmarangon/how-to-calculate-the-word-error-rate-in-python-ce0751a46052">How to calculate the Word Error Rate in Python</a></li>
+  <li><a href="https://thepythoncode.com/article/calculate-word-error-rate-in-python">Word Error Rate in Python</a></li>
+  <li><a href="https://towardsdatascience.com/evaluating-ocr-output-quality-with-character-error-rate-cer-and-word-error-rate-wer-853175297510#bypass">Evaluate OCR Output Quality with Character Error Rate (CER) and Word Error Rate (WER)</a></li>
+  <li><a href="https://towardsdatascience.com/text-similarity-w-levenshtein-distance-in-python-2f7478986e75">Text Similarity w/ Levenshtein Distance in Python</a></li>
+  <li><a href="https://medium.com/@ethannam/understanding-the-levenshtein-distance-equation-for-beginners-c4285a5604f0">Understanding the Levenshtein Distance Equation for Beginners</a></li>
+  <li><a href="https://javascript.plainenglish.io/a-beginners-guide-to-the-levenshtein-distance-algorithm-part-1-d581fef7588f">A Beginner’s Guide to the Levenshtein Distance Algorithm (Part 1)</a></li>
+</ul>
+
+</article>
+
+<!--  -->
+    </main>
+
+    <hr>
+    <footer class="footer">
+      <small>
+        &copy; Zuhdi Fikri
+        <time datetime="2024-06-11T19:45:18+07:00">2024</time>
+        - Made with ❤️ using <a href="https://jekyllrb.com/">Jekyll 4.2.1</a>
+      </small>
+    </footer>
+  </div>
+
+  <script>
+  function addLink() {
+    //Get the selected text and append the extra info
+    var selection = window.getSelection();
+    pagelink = "<br><br>" + "Read more at: " + document.location.href;
+    copytext = selection + pagelink;
+    //Create a new div to hold the prepared text
+    newdiv = document.createElement('div');
+
+    //hide the newly created container
+    newdiv.style.position = 'absolute';
+    newdiv.style.left = '-99999px';
+
+    //insert the container, fill it with the extended text, and define the new selection
+    document.body.appendChild(newdiv);
+    newdiv.innerHTML = copytext;
+    selection.selectAllChildren(newdiv);
+
+    window.setTimeout(function () {
+      document.body.removeChild(newdiv);
+    }, 100);
+    
+  }
+  document.addEventListener('copy', addLink);
+
+</script>
+
+  <script>
+  function checkLang() {
+    var check = document.getElementById("checklangbtn");
+    var slider = document.getElementById("slider");
+    if (check.checked == true) {
+      slider.setAttribute('data-before', 'id')
+      document.getElementById("id-intro").hidden = false;
+      document.getElementById("en-intro").hidden = true;
+    } else {
+      slider.setAttribute('data-before', 'en')
+      document.getElementById("id-intro").hidden = true;
+      document.getElementById("en-intro").hidden = false;
+    }
+  }
+</script>
+
+</body>
+
+</html>
