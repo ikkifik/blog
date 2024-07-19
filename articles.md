@@ -5,10 +5,9 @@ title: Artikel
 
 # 💡️ Artikel
 
-Karena memulai adalah hal yang berat, mari kita mulai dengan yang ringan-ringan.  
-Gunakan <mark>Ctrl+F</mark> untuk mencari judul materi.  
+Karena memulai adalah hal yang berat, mari kita mulai dengan yang ringan-ringan. Gunakan <mark>Ctrl+F</mark> untuk mencari judul materi.  
 {% assign items_grouped = site.articles | group_by_exp: "post", "post.tags" %}
-Daftar topik yang tersedia: <br>{% for tag in items_grouped %}<mark><a href="#{{ tag.name }}">#{{ tag.name[0] | replace: "-", " " }}({{ tag.size }})</a></mark> {% endfor %}
+Daftar topik yang tersedia: {% for tag in items_grouped %}<mark><a href="#{{ tag.name }}">#{{ tag.name[0] | replace: "-", " " }}({{ tag.size }})</a></mark> {% endfor %}
 
 <hr>
 
