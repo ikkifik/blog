@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark-poole">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ '/assets/apple-touch-icon-precomposed.png' | relative_url }}">
+  <link rel="shortcut icon" href="{{ '/assets/favicon.ico' | relative_url }}">
+
+  <title>
+    {% if page.title == "Home" %}
+      {{ site.title }}{% if site.tagline %} &middot; {{ site.tagline }}{% endif %}
+    {% else %}
+      {{ page.title }} &middot; {{ site.title }}
+    {% endif %}
+  </title>
+
+  <style>
+    body {
+      margin: 1rem 10rem;
+      font-family: 'consolas';
+      font-size: 18px;
+    }
+  </style>
+
+  {% seo title=false %}
+  {% if site.ga_analytics %}
+    {% include ga_analytics.html %}
+  {% endif %}
+</head>
+
+
+<body>
+  {{ content }}
+  {% include copyright_link.html %}
+</body>
+
+</html>
