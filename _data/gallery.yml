@@ -1,0 +1,30 @@
+gallery:
+  - caption: caption.
+    date: 2024-04-04
+    path: assets/gallery/image.jpg
+    weight: 1
+
+  - caption: caption.
+    date: 2024-04-04
+    path: assets/gallery/image.jpg
+    weight: 2
+
+  - caption: caption.
+    date: 2024-04-04
+    path: assets/gallery/image.jpg
+    weight: 3
+
+  - caption: caption.
+    date: 2024-04-04
+    path: assets/gallery/image.jpg
+    weight: 4
+
+  - caption: caption.
+    date: 2024-04-04
+    path: assets/gallery/image.jpg
+    weight: 5
+    
+  - caption: caption.
+    date: 2024-04-04
+    path: assets/gallery/image.jpg
+    weight: 6

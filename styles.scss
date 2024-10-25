@@ -31,7 +31,7 @@
 @import "sliderbtn";
 
 $outline-highlight: #e6bc01;
-$home-image-size: 17rem;
+$home-image-size: 16rem;
 $home-image-size-m: 200px;
 
 
@@ -135,6 +135,18 @@ footer small {
   float: left;
   margin: auto 2em auto 0;
   position: relative;
+}
+
+.photohome .image-hover {
+  width: $home-image-size;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+.photohome:hover .image-hover {
+  transition-delay: 2s;
+  display: none;
 }
 
 .photohome::after {
