@@ -129,7 +129,6 @@ footer small {
   text-align: center;  
 }
 
-// self-defined
 .photohome {
   width: $home-image-size;
   float: left;
@@ -186,7 +185,6 @@ footer small {
   font-size: 2.5rem;
   margin: 0 0.5rem;
 }
-// self-defined
 
 ul#course_taken li{
   margin-bottom: 5px;
@@ -219,6 +217,31 @@ div#intro-contact {
     margin: 0;
   }
 }
+
+// Threads
+.thread-item {
+  border-radius: 5px;
+  list-style: none;
+  padding: 1rem;
+  border-top:lightslategray solid 1px;
+  border-bottom:lightslategray solid 1px;
+  margin: 0.75rem auto;
+  width: 80%;
+}
+
+.thread-item iframe {
+  margin: auto;
+  display: block;
+  width: 40rem; // 560px; 
+  height: 20rem; // 315px;
+}
+
+.thread-footer {
+  text-align: center;
+  font-size: 8pt;
+}
+
+// Endthreads
 
 @media (hover: hover) and (pointer: fine) {
   .underline:hover::before{
