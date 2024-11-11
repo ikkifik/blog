@@ -6,14 +6,16 @@ title: Utas
 
 {% for thread in site.data.threads.threads limit:5%}
   <li class="thread-item">
-    <p><strong>[{{ thread.date | date: "%b %m, %Y" }}]</strong> {{thread.caption}}</p>
+    <p><strong>[{{ thread.date | date: "%b %d, %Y" }}]</strong> {{thread.caption}}</p>
     
     {% if thread.media %}
+    <div class="thread-media">
       <iframe 
         src="https://www.youtube.com/embed/{{ thread.media }}" 
         frameborder="0" 
         referrerpolicy="no-referrer-when-downgrade">
       </iframe>
+    </div>  
     {% endif %}
   </li>
 {% endfor %}

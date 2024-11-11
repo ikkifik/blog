@@ -223,17 +223,28 @@ div#intro-contact {
   border-radius: 5px;
   list-style: none;
   padding: 1rem;
-  border-top:lightslategray solid 1px;
-  border-bottom:lightslategray solid 1px;
-  margin: 0.75rem auto;
+  background-color: black;
+  margin: 0.5rem auto;
   width: 80%;
 }
 
-.thread-item iframe {
+.thread-media {
+  position: relative;
+  width: 80%;
   margin: auto;
-  display: block;
-  width: 40rem; // 560px; 
-  height: 20rem; // 315px;
+  overflow: hidden;
+  padding: 20%; 
+}
+
+.thread-media iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 .thread-footer {
