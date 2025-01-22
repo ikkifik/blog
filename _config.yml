@@ -46,8 +46,8 @@ nav:
     url: /articles
   - title: Project
     url: /project
-  - title: Utas
-    url: /threads
+  # - title: Utas
+  #   url: /threads
   # - title: Pub.
   #   url: /publications
   # - title: Agenda
